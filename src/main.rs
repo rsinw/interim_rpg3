@@ -25,7 +25,7 @@ fn main() {
 
     let mut gl = GlGraphics::new(opengl);
 
-    let font_path = "C:\\Windows\\Fonts\\Arial.ttf";
+    let font_path = "assets/dogicapixel.ttf";  // C:\\Windows\\Fonts\\Arial.ttf
     let mut glyphs = GlyphCache::new(
         font_path,
         (),

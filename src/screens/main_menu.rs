@@ -63,7 +63,7 @@ impl Screen for MainMenu {
 
         // Draw "PLAY" text
         let play_text = "PLAY";
-        let text_size = 32;
+        let text_size = 16;
         
         // Calculate text width for centering
         let play_text_width = glyphs.width(text_size, play_text)

@@ -84,7 +84,7 @@ impl Popup {
                 );
 
                 // Draw text
-                text::Text::new_color([1.0, 1.0, 1.0, 1.0], 20)
+                text::Text::new_color([1.0, 1.0, 1.0, 1.0], 16)
                     .draw(
                         text,
                         glyphs,

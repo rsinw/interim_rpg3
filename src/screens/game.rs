@@ -4,8 +4,8 @@ use piston::input::*;
 use crate::screens::{Screen, ScreenState};
 use super::popup::Popup;
 
-const GRID_MIN: i32 = -10;
-const GRID_MAX: i32 = 10;
+const GRID_MIN: i32 = -5;
+const GRID_MAX: i32 = 5;
 const POINT_SIZE: f64 = 5.0;
 const GRID_LINE_COLOR: [f32; 4] = [1.0, 1.0, 1.0, 1.0];  // White
 const PLAYER_COLOR: [f32; 4] = [1.0, 0.0, 0.0, 1.0];     // Red
@@ -72,10 +72,10 @@ impl GameScreen {
 
         // Add other obstacles
         obstacles.extend(vec![
-            Point { x: 5, y: 5, movable: false, facing: None },
-            Point { x: -5, y: -5, movable: false, facing: None },
-            Point { x: -5, y: 5, movable: false, facing: None },
-            Point { x: 5, y: -5, movable: false, facing: None },
+            Point { x: 2, y: 2, movable: false, facing: None },
+            Point { x: -2, y: -2, movable: false, facing: None },
+            Point { x: -2, y: 2, movable: false, facing: None },
+            Point { x: 2, y: -2, movable: false, facing: None },
         ]);
 
         GameScreen {
@@ -201,7 +201,7 @@ impl GameScreen {
 
     fn draw_direction_text(&self, c: &Context, g: &mut GlGraphics, glyphs: &mut GlyphCache) {
         if let Some(direction) = self.player.facing {
-            text::Text::new_color(TEXT_COLOR, 22)
+            text::Text::new_color(TEXT_COLOR, 16)
                 .draw(
                     direction.to_string(),
                     glyphs,
